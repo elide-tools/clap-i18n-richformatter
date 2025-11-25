@@ -28,9 +28,15 @@ clap-argument-context = 参数
 clap-error-heading = 错误
 clap-tip-heading = 小贴士
 clap-usage-heading = 用法:
+clap-arguments-heading = 参数
+clap-options-heading = 选项
+clap-commands-heading = 命令
 clap-dyn-errorkind-unexpected-arg = 不支持该参数 '{ $arg }'
 clap-possible-value-context = 可能的值
 clap-value-context = 值
 clap-dyn-errorkind-too-few-values = { $invalid_arg } 预期 { $num_values }  个参数，但仅指定 { $actual_num_values } 个
 clap-dyn-errorkind-wrong-number-of-values = { $invalid_arg } 预期 { $num_values }  个参数，但指定了 { $actual_num_values } 个
 clap-dyn-errorkind-value-validation = 对于参数 '{ $invalid_arg }' 而言，'{ $invalid_value }' 是无效的值
+
+clap-help-help = 打印帮助信息（使用 '-h' 查看摘要）
+clap-help-version = 打印版本信息
