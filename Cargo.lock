@@ -115,7 +115,7 @@ dependencies = [
 
 [[package]]
 name = "clap-i18n-richformatter"
-version = "0.2.0"
+version = "0.3.0"
 dependencies = [
  "clap",
  "clap-i18n-derive",
