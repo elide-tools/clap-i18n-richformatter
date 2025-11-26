@@ -89,13 +89,17 @@ pub fn clap_i18n(_attr: TokenStream, item: TokenStream) -> TokenStream {
                     clap_i18n_richformatter::__private::get_translation("clap-arguments-heading").into_boxed_str()
                 );
 
-                let help_template: &'static str = Box::leak(format!(
-                    "{{about-with-newline}}\n\
-                    {usage_heading} {{usage}}\n\
-                    \n\
-                    {{all-args}}\
-                    {{after-help}}"
-                ).into_boxed_str());
+                // Build help template with styled usage heading (bold + underline like other headings)
+                let help_template: clap::builder::StyledStr = {
+                    use std::fmt::Write;
+                    use clap::builder::styling::{Style, Effects};
+                    let mut s = clap::builder::StyledStr::new();
+                    let header = Style::new().effects(Effects::BOLD | Effects::UNDERLINE);
+                    let _ = write!(s, "{{before-help}}{{about-with-newline}}\n");
+                    let _ = write!(s, "{header}{usage_heading}{header:#} {{usage}}\n\n");
+                    let _ = write!(s, "{{all-args}}{{after-help}}");
+                    s
+                };
 
                 let mut cmd = Self::command()
                     // Disable built-in help and version
