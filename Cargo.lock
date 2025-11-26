@@ -105,10 +105,20 @@ dependencies = [
 ]
 
 [[package]]
+name = "clap-i18n-derive"
+version = "0.1.0"
+dependencies = [
+ "proc-macro2",
+ "quote",
+ "syn",
+]
+
+[[package]]
 name = "clap-i18n-richformatter"
 version = "0.1.4"
 dependencies = [
  "clap",
+ "clap-i18n-derive",
  "i18n-embed",
  "i18n-embed-fl",
  "rust-embed",

@@ -13,8 +13,19 @@ use i18n_embed::Localizer;
 
 use crate::lang::CLAP_I18N_LANGUAGE_LOADER;
 pub use crate::lang::ClapI18nLocalizations;
+use crate::lang::fl;
 
 mod lang;
+
+// Re-export the derive macro
+#[cfg(feature = "derive")]
+pub use clap_i18n_derive::clap_i18n;
+
+// Hidden module for internal use by derive macro (not shown in code completion)
+#[doc(hidden)]
+pub mod __private {
+    pub use crate::lang::get_translation;
+}
 
 const TAB: &str = "  ";
 
