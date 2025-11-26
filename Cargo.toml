@@ -11,7 +11,7 @@ i18n-embed-fl = "0.10"
 rust-embed = "8.5.0"
 unic-langid = "0.9.5"
 clap = "4"
-clap-i18n-derive = { path = "clap-i18n-derive", optional = true }
+clap-i18n-derive = { version = "0.1.0", path = "clap-i18n-derive", optional = true }
 
 [dev-dependencies]
 clap = { version = "4", features = ["derive"] }
