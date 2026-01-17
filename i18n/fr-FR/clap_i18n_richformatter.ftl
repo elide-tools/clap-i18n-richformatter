@@ -46,6 +46,9 @@ clap-value-context =
 clap-error-heading = erreur
 clap-tip-heading = conseil
 clap-usage-heading = Utilisation :
+clap-arguments-heading = Arguments
+clap-options-heading = Options
+clap-commands-heading = Commands
 clap-packages-value-name = PAQUETS
 clap-dyn-errorkind-unexpected-arg = argument inattendu '{ $arg }' trouvé
 clap-dyn-errorkind-too-few-values =
@@ -59,3 +62,5 @@ clap-dyn-errorkind-wrong-number-of-values =
        *[other] { $num_values } valeurs requises pour '{ $invalid_arg }' mais { $actual_num_values } ont été fournies
     }
 clap-dyn-errorkind-value-validation = valeur invalide '{ $invalid_value }' pour '{ $invalid_arg }'
+clap-help-help = Print help (see a summary with '-h')
+clap-help-version = Print version
