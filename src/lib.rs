@@ -16,7 +16,7 @@ use crate::lang::CLAP_I18N_LANGUAGE_LOADER;
 pub use crate::lang::ClapI18nLocalizations;
 use crate::lang::fl;
 
-mod lang;
+pub mod lang;
 
 // Re-export the derive macro
 #[cfg(feature = "derive")]
