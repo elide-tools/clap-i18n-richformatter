@@ -249,7 +249,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "54f0d287c53ffd184d04d8677f590f4ac5379785529e5e08b1c8083acdd5c198"
 dependencies = [
  "memchr",
- "thiserror 2.0.17",
+ "thiserror",
 ]
 
 [[package]]
@@ -270,23 +270,21 @@ checksum = "2304e00983f87ffb38b55b444b5e3b60a884b5d30c0fca7d82fe33449bbe55ea"
 
 [[package]]
 name = "i18n-config"
-version = "0.4.8"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "3e06b90c8a0d252e203c94344b21e35a30f3a3a85dc7db5af8f8df9f3e0c63ef"
+version = "0.4.9"
+source = "git+https://github.com/elide-tools/cargo-i18n.git?rev=6ce6bf5deaf9e1f302d0d590a7898faafbfa2c4d#6ce6bf5deaf9e1f302d0d590a7898faafbfa2c4d"
 dependencies = [
  "basic-toml",
  "log",
  "serde",
  "serde_derive",
- "thiserror 1.0.69",
+ "thiserror",
  "unic-langid",
 ]
 
 [[package]]
 name = "i18n-embed"
-version = "0.16.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "a217bbb075dcaefb292efa78897fc0678245ca67f265d12c351e42268fcb0305"
+version = "0.16.1"
+source = "git+https://github.com/elide-tools/cargo-i18n.git?rev=6ce6bf5deaf9e1f302d0d590a7898faafbfa2c4d#6ce6bf5deaf9e1f302d0d590a7898faafbfa2c4d"
 dependencies = [
  "arc-swap",
  "fluent",
@@ -297,17 +295,15 @@ dependencies = [
  "log",
  "parking_lot",
  "rust-embed",
- "sys-locale",
- "thiserror 1.0.69",
+ "thiserror",
  "unic-langid",
  "walkdir",
 ]
 
 [[package]]
 name = "i18n-embed-fl"
-version = "0.10.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "e598ed73b67db92f61e04672e599eef2991a262a40e1666735b8a86d2e7e9f30"
+version = "0.11.0"
+source = "git+https://github.com/elide-tools/cargo-i18n.git?rev=6ce6bf5deaf9e1f302d0d590a7898faafbfa2c4d#6ce6bf5deaf9e1f302d0d590a7898faafbfa2c4d"
 dependencies = [
  "find-crate",
  "fluent",
@@ -324,9 +320,8 @@ dependencies = [
 
 [[package]]
 name = "i18n-embed-impl"
-version = "0.8.4"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "0f2cc0e0523d1fe6fc2c6f66e5038624ea8091b3e7748b5e8e0c84b1698db6c2"
+version = "0.8.5"
+source = "git+https://github.com/elide-tools/cargo-i18n.git?rev=6ce6bf5deaf9e1f302d0d590a7898faafbfa2c4d#6ce6bf5deaf9e1f302d0d590a7898faafbfa2c4d"
 dependencies = [
  "find-crate",
  "i18n-config",
@@ -597,41 +592,12 @@ dependencies = [
 ]
 
 [[package]]
-name = "sys-locale"
-version = "0.3.2"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "8eab9a99a024a169fe8a903cf9d4a3b3601109bcc13bd9e3c6fff259138626c4"
-dependencies = [
- "libc",
-]
-
-[[package]]
-name = "thiserror"
-version = "1.0.69"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "b6aaf5339b578ea85b50e080feb250a3e8ae8cfcdff9a461c9ec2904bc923f52"
-dependencies = [
- "thiserror-impl 1.0.69",
-]
-
-[[package]]
 name = "thiserror"
 version = "2.0.17"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "f63587ca0f12b72a0600bcba1d40081f830876000bb46dd2337a3051618f4fc8"
 dependencies = [
- "thiserror-impl 2.0.17",
-]
-
-[[package]]
-name = "thiserror-impl"
-version = "1.0.69"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "4fee6c4efc90059e10f81e6d42c60a18f76588c3d74cb83a0b242a2b6c7504c1"
-dependencies = [
- "proc-macro2",
- "quote",
- "syn",
+ "thiserror-impl",
 ]
 
 [[package]]
