@@ -13,7 +13,7 @@ clap-errorkind-invalid-utf8 = 在一个或多个参数中检测到无效 UTF-8
 clap-dyn-errorkind-multipletimes = 参数 '{ $arg }' 不能多次使用
 clap-dyn-errorkind-unrecognized-subcmd = 不支持的子命令 '{ $sub }'
 clap-dyn-errorkind-argconflict = 参数 '{ $arg }' 不能与 '{ $arg2 }' 一起使用
-clap-dyn-errorkind-subcmd-conflict = the subcommand '{ $arg }' cannot be used with '{ $subcmd }'
+clap-dyn-errorkind-subcmd-conflict = 子命令 '{ $arg }' 不能与 '{ $subcmd }' 一起使用
 clap-dyn-errorkind-conflict-other = 一个或多个其他指定参数
 clap-dyn-errorkind-no-eq = 为 '{ $arg }' 指定参数时需要使用等号 (=) 标记
 clap-dyn-errorkind-not-provided = 未提供下列必要参数:
@@ -25,37 +25,31 @@ clap-similar-exists-single = 有一个类似的{ $context }: '{ $possible }'
 clap-similar-exists-multi = 存在一些类似的{ $context }:
 clap-subcommand-context =
     { $multi ->
-        [true] subcommands
-       *[other] subcommand
+       *[other] 子命令
     }
 clap-argument-context =
     { $multi ->
-        [true] arguments
-       *[other] argument
+       *[other] 参数
     }
 clap-possible-value-context =
     { $multi ->
-        [true] possible values
-       *[other] possible value
+       *[other] 可能的值
     }
 clap-value-context =
     { $multi ->
-        [true] values
-       *[other] value
+       *[other] 值
     }
 clap-error-heading = 错误
 clap-tip-heading = 小贴士
 clap-usage-heading = 用法:
-clap-packages-value-name = PACKAGES
+clap-packages-value-name = 软件包
 clap-dyn-errorkind-unexpected-arg = 不支持该参数 '{ $arg }'
 clap-dyn-errorkind-too-few-values =
     { $n ->
-        [1] { $min_values } values required by '{ $invalid_arg }'; only '{ $actual_num_values }' were provided
-       *[other] { $min_values } values required by '{ $invalid_arg }'; only '{ $actual_num_values }' was provided
+       *[other] '{ $invalid_arg }' 需要 { $min_values } 个值；但只提供了 '{ $actual_num_values }' 个
     }
 clap-dyn-errorkind-wrong-number-of-values =
     { $n ->
-        [1] { $num_values } values required for '{ $invalid_arg }' but { $actual_num_values } were provided
-       *[other] { $num_values } values required by '{ $invalid_arg }'; but '{ $actual_num_values }' was provided
+       *[other] '{ $invalid_arg }' 需要 { $num_values } 个值；但提供了 '{ $actual_num_values }' 个
     }
 clap-dyn-errorkind-value-validation = 对于参数 '{ $invalid_arg }' 而言，'{ $invalid_value }' 是无效的值
