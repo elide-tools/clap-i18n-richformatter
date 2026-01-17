@@ -1,61 +1,65 @@
-clap-errorkind-invalidvalue = one of the values isn't valid for an argument
-clap-errorkind-unknown-arg = unexpected argument found
-clap-errorkind-invalid-subcmd = unrecognized subcommand
-clap-errorkind-noeq = equal is needed when assigning values to one of the arguments
-clap-errorkind-value-validation = invalid value for one of the arguments
-clap-errorkind-too-many-values = unexpected value for an argument found
-clap-errorkind-too-few-values = more values required for an argument
-clap-errorkind-wrong-number-of-values = too many or too few values for an argument
-clap-errorkind-arg-conflict = an argument cannot be used with one or more of the other specified arguments
-clap-errorkind-missing-required-arg = one or more required arguments were not provided
-clap-errorkind-missing-subcmd = a subcommand is required but one was not provided
-clap-errorkind-invalid-utf8 = invalid UTF-8 was detected in one or more arguments
-clap-dyn-errorkind-multipletimes = the argument '{ $arg }' cannot be used multiple times
-clap-dyn-errorkind-unrecognized-subcmd = unrecognized subcommand '{ $sub }'
-clap-dyn-errorkind-argconflict = the argument '{ $arg }' cannot be used with '{ $arg2 }'
-clap-dyn-errorkind-subcmd-conflict = the subcommand '{ $arg }' cannot be used with '{ $subcmd }'
-clap-dyn-errorkind-conflict-other = { " one or more of the other specified arguments" }
-clap-dyn-errorkind-no-eq = equal sign is needed when assigning values to '{ $arg }'
-clap-dyn-errorkind-not-provided = the following required arguments were not provided:
-clap-dyn-errorkind-subcmd-not-provided = '{ $sub }' requires a subcommand but one was not provided
-clap-dyn-errorkind-required-arg-but-none = a value is required for '{ $arg }' but none was supplied
-clap-dyn-errorkind-too-many-values-no-more-expected = unexpected value '{ $value }' for '{ $arg }' found; no more were expected
-clap-help-tips = For more information, try '{ $help }'.
-clap-similar-exists-single = a similar { $context } exists: '{ $possible }'
-clap-similar-exists-multi = some similar { $context }s exist:
+clap-errorkind-invalidvalue = одно из значений недопустимо для аргумента
+clap-errorkind-unknown-arg = обнаружен неожиданный аргумент
+clap-errorkind-invalid-subcmd = нераспознанная подкоманда
+clap-errorkind-noeq = для присвоения значений одному из аргументов необходим знак равенства
+clap-errorkind-value-validation = недопустимое значение для одного из аргументов
+clap-errorkind-too-many-values = обнаружено неожиданное значение для аргумента
+clap-errorkind-too-few-values = для аргумента требуется больше значений
+clap-errorkind-wrong-number-of-values = слишком много или слишком мало значений для аргумента
+clap-errorkind-arg-conflict = аргумент не может использоваться с одним или несколькими другими указанными аргументами
+clap-errorkind-missing-required-arg = один или несколько обязательных аргументов не были предоставлены
+clap-errorkind-missing-subcmd = требуется подкоманда, но она не была указана
+clap-errorkind-invalid-utf8 = в одном или нескольких аргументах обнаружен недопустимый UTF-8
+clap-dyn-errorkind-multipletimes = аргумент '{ $arg }' нельзя использовать несколько раз
+clap-dyn-errorkind-unrecognized-subcmd = нераспознанная подкоманда '{ $sub }'
+clap-dyn-errorkind-argconflict = аргумент '{ $arg }' нельзя использовать с '{ $arg2 }'
+clap-dyn-errorkind-subcmd-conflict = подкоманда '{ $arg }' не может использоваться с '{ $subcmd }'
+clap-dyn-errorkind-conflict-other = { " один или несколько других указанных аргументов" }
+clap-dyn-errorkind-no-eq = для присвоения значений '{ $arg }' необходим знак равенства
+clap-dyn-errorkind-not-provided = следующие обязательные аргументы не были предоставлены:
+clap-dyn-errorkind-subcmd-not-provided = '{ $sub }' требует подкоманду, но она не была указана
+clap-dyn-errorkind-required-arg-but-none = для '{ $arg }' требуется значение, но оно не было указано
+clap-dyn-errorkind-too-many-values-no-more-expected = обнаружено неожиданное значение '{ $value }' для '{ $arg }'; больше значений не ожидалось
+clap-help-tips = Для получения дополнительной информации введите '{ $help }'.
+clap-similar-exists-single = существует похожий { $context }: '{ $possible }'
+clap-similar-exists-multi = существуют похожие { $context }:
 clap-subcommand-context =
     { $multi ->
-        [true] subcommands
-       *[other] subcommand
+        [true] подкоманды
+       *[other] подкоманда
     }
 clap-argument-context =
     { $multi ->
-        [true] arguments
-       *[other] argument
+        [true] аргументы
+       *[other] аргумент
     }
 clap-possible-value-context =
     { $multi ->
-        [true] possible values
-       *[other] possible value
+        [true] возможные значения
+       *[other] возможное значение
     }
 clap-value-context =
     { $multi ->
-        [true] values
-       *[other] value
+        [true] значения
+       *[other] значение
     }
-clap-error-heading = error
-clap-tip-heading = tip
-clap-usage-heading = Usage:
-clap-packages-value-name = PACKAGES
-clap-dyn-errorkind-unexpected-arg = unexpected argument '{ $arg }' found
+clap-error-heading = ошибка
+clap-tip-heading = подсказка
+clap-usage-heading = Использование:
+clap-packages-value-name = ПАКЕТЫ
+clap-dyn-errorkind-unexpected-arg = обнаружен неожиданный аргумент '{ $arg }'
 clap-dyn-errorkind-too-few-values =
     { $n ->
-        [1] { $min_values } values required by '{ $invalid_arg }'; only '{ $actual_num_values }' were provided
-       *[other] { $min_values } values required by '{ $invalid_arg }'; only '{ $actual_num_values }' was provided
+        [one] для '{ $invalid_arg }' требуется { $min_values } значение; предоставлено только { $actual_num_values }
+        [few] для '{ $invalid_arg }' требуется { $min_values } значения; предоставлено только { $actual_num_values }
+        [many] для '{ $invalid_arg }' требуется { $min_values } значений; предоставлено только { $actual_num_values }
+       *[other] для '{ $invalid_arg }' требуется { $min_values } значений; предоставлено только { $actual_num_values }
     }
 clap-dyn-errorkind-wrong-number-of-values =
     { $n ->
-        [1] { $num_values } values required for '{ $invalid_arg }' but { $actual_num_values } were provided
-       *[other] { $num_values } values required by '{ $invalid_arg }'; but '{ $actual_num_values }' was provided
+        [one] для '{ $invalid_arg }' требуется { $num_values } значение, но предоставлено { $actual_num_values }
+        [few] для '{ $invalid_arg }' требуется { $num_values } значения, но предоставлено { $actual_num_values }
+        [many] для '{ $invalid_arg }' требуется { $num_values } значений, но предоставлено { $actual_num_values }
+       *[other] для '{ $invalid_arg }' требуется { $num_values } значений, но предоставлено { $actual_num_values }
     }
-clap-dyn-errorkind-value-validation = invalid value '{ $invalid_value }' for '{ $invalid_arg }'
+clap-dyn-errorkind-value-validation = недопустимое значение '{ $invalid_value }' для '{ $invalid_arg }'
