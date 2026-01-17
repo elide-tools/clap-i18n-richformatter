@@ -9,8 +9,10 @@ use clap::error::ContextValue;
 use clap::error::ErrorFormatter;
 use clap::error::ErrorKind;
 use i18n_embed::DefaultLocalizer;
-use i18n_embed::DesktopLanguageRequester;
 use i18n_embed::Localizer;
+
+#[cfg(feature = "desktop-language-requester")]
+use i18n_embed::DesktopLanguageRequester;
 
 use crate::lang::CLAP_I18N_LANGUAGE_LOADER;
 pub use crate::lang::ClapI18nLocalizations;
@@ -30,6 +32,7 @@ pub mod __private {
 
 const TAB: &str = "  ";
 
+#[cfg(feature = "desktop-language-requester")]
 pub fn init_clap_rich_formatter_localizer() {
     let localizer = DefaultLocalizer::new(&*CLAP_I18N_LANGUAGE_LOADER, &ClapI18nLocalizations);
     let requested_languages = DesktopLanguageRequester::requested_languages();
@@ -52,6 +55,7 @@ pub trait CommandI18nExt {
 impl CommandI18nExt for clap::Command {
     /// `clap::Command::try_get_matches` i18n version
     fn try_get_matches_i18n(self) -> Result<ArgMatches, clap::error::Error<ClapI18nRichFormatter>> {
+        #[cfg(feature = "desktop-language-requester")]
         init_clap_rich_formatter_localizer();
         self.try_get_matches()
             .map_err(|e| e.apply::<ClapI18nRichFormatter>())

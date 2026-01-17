@@ -17,8 +17,9 @@ clap-i18n-derive = { version = "0.1.0", path = "clap-i18n-derive", optional = tr
 clap = { version = "4", features = ["derive"] }
 
 [features]
-default = ["derive"]
+default = ["derive", "desktop-language-requester"]
 derive = ["dep:clap-i18n-derive"]
+desktop-language-requester = ["i18n-embed/desktop-requester"]
 
 [workspace]
 members = ["clap-i18n-derive"]
