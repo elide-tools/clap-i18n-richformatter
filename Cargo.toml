@@ -6,8 +6,8 @@ license = "MIT"
 description = "Clap rich formatter with i18n support"
 
 [dependencies]
-i18n-embed = { git = "https://github.com/elide-tools/cargo-i18n.git", rev = "dbff18226ba47ccabd45cf1b7fa93153ebbbc62e", features = ["fluent-system"] }
-i18n-embed-fl = { git = "https://github.com/elide-tools/cargo-i18n.git", rev = "dbff18226ba47ccabd45cf1b7fa93153ebbbc62e" }
+i18n-embed = { git = "https://github.com/elide-tools/cargo-i18n.git", rev = "d070ae9f1dfe8c0ebca6be10691e142b071ce4e6", features = ["fluent-system"] }
+i18n-embed-fl = { git = "https://github.com/elide-tools/cargo-i18n.git", rev = "d070ae9f1dfe8c0ebca6be10691e142b071ce4e6" }
 rust-embed = "8"
 unic-langid = "0"
 clap = "4"
