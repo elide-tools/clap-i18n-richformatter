@@ -54,9 +54,9 @@ dependencies = [
 
 [[package]]
 name = "arc-swap"
-version = "1.8.1"
+version = "1.8.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "9ded5f9a03ac8f24d1b8a25101ee812cd32cdc8c50a4c50237de2c4915850e73"
+checksum = "f9f3647c145568cec02c42054e07bdf9a5a698e15b466fb2341bfc393cd24aa5"
 dependencies = [
  "rustversion",
 ]
@@ -72,9 +72,9 @@ dependencies = [
 
 [[package]]
 name = "bitflags"
-version = "2.10.0"
+version = "2.11.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "812e12b5285cc515a9c72a5c1d3b6d46a19dac5acfef5265968c166106e31dd3"
+checksum = "843867be96c8daad0d758b57df9392b6d8d271134fce549de6ce169ff98a92af"
 
 [[package]]
 name = "block-buffer"
@@ -93,9 +93,9 @@ checksum = "9330f8b2ff13f34540b44e946ef35111825727b38d33286ef986142615121801"
 
 [[package]]
 name = "clap"
-version = "4.5.58"
+version = "4.5.60"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "63be97961acde393029492ce0be7a1af7e323e6bae9511ebfac33751be5e6806"
+checksum = "2797f34da339ce31042b27d23607e051786132987f595b02ba4f6a6dffb7030a"
 dependencies = [
  "clap_builder",
  "clap_derive",
@@ -124,9 +124,9 @@ dependencies = [
 
 [[package]]
 name = "clap_builder"
-version = "4.5.58"
+version = "4.5.60"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "7f13174bda5dfd69d7e947827e5af4b0f2f94a4a3ee92912fba07a66150f21e2"
+checksum = "24a241312cea5059b13574bb9b3861cabf758b879c15190b37b6d6fd63ab6876"
 dependencies = [
  "anstream",
  "anstyle",
@@ -271,7 +271,7 @@ checksum = "2304e00983f87ffb38b55b444b5e3b60a884b5d30c0fca7d82fe33449bbe55ea"
 [[package]]
 name = "i18n-config"
 version = "0.4.9"
-source = "git+https://github.com/elide-tools/cargo-i18n.git?rev=98fc8908d420539320f05df09ea99d41cad7a01e#98fc8908d420539320f05df09ea99d41cad7a01e"
+source = "git+https://github.com/elide-tools/cargo-i18n.git?rev=8490805c1a8a65bf3cd6ecb47bd3408b4c2b4049#8490805c1a8a65bf3cd6ecb47bd3408b4c2b4049"
 dependencies = [
  "basic-toml",
  "log",
@@ -284,7 +284,7 @@ dependencies = [
 [[package]]
 name = "i18n-embed"
 version = "0.16.1"
-source = "git+https://github.com/elide-tools/cargo-i18n.git?rev=98fc8908d420539320f05df09ea99d41cad7a01e#98fc8908d420539320f05df09ea99d41cad7a01e"
+source = "git+https://github.com/elide-tools/cargo-i18n.git?rev=8490805c1a8a65bf3cd6ecb47bd3408b4c2b4049#8490805c1a8a65bf3cd6ecb47bd3408b4c2b4049"
 dependencies = [
  "arc-swap",
  "fluent",
@@ -304,7 +304,7 @@ dependencies = [
 [[package]]
 name = "i18n-embed-fl"
 version = "0.11.0"
-source = "git+https://github.com/elide-tools/cargo-i18n.git?rev=98fc8908d420539320f05df09ea99d41cad7a01e#98fc8908d420539320f05df09ea99d41cad7a01e"
+source = "git+https://github.com/elide-tools/cargo-i18n.git?rev=8490805c1a8a65bf3cd6ecb47bd3408b4c2b4049#8490805c1a8a65bf3cd6ecb47bd3408b4c2b4049"
 dependencies = [
  "find-crate",
  "fluent",
@@ -322,7 +322,7 @@ dependencies = [
 [[package]]
 name = "i18n-embed-impl"
 version = "0.8.5"
-source = "git+https://github.com/elide-tools/cargo-i18n.git?rev=98fc8908d420539320f05df09ea99d41cad7a01e#98fc8908d420539320f05df09ea99d41cad7a01e"
+source = "git+https://github.com/elide-tools/cargo-i18n.git?rev=8490805c1a8a65bf3cd6ecb47bd3408b4c2b4049#8490805c1a8a65bf3cd6ecb47bd3408b4c2b4049"
 dependencies = [
  "find-crate",
  "i18n-config",
@@ -583,9 +583,9 @@ checksum = "7da8b5736845d9f2fcb837ea5d9e2628564b3b043a70948a3f0b778838c5fb4f"
 
 [[package]]
 name = "syn"
-version = "2.0.115"
+version = "2.0.117"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "6e614ed320ac28113fa64972c4262d5dbc89deacdfd00c34a3e4cea073243c12"
+checksum = "e665b8803e7b1d2a727f4023456bbbbe74da67099c585258af0ad9c5013b9b99"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -677,9 +677,9 @@ dependencies = [
 
 [[package]]
 name = "unicode-ident"
-version = "1.0.23"
+version = "1.0.24"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "537dd038a89878be9b64dd4bd1b260315c1bb94f4d784956b81e27a088d9a09e"
+checksum = "e6e4313cd5fcd3dad5cafa179702e2b244f760991f45397d14d4ebf38247da75"
 
 [[package]]
 name = "utf8parse"
